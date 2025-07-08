@@ -1,0 +1,31 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+mcp-server.log
+mcp-launcher.log
+
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Keep env.example but not env
+env
+env.local
+
+# Build and temp files
+.DS_Store
+.vscode/
+.idea/
+coverage
+tmp
+.tmp
+dist
+build
+
+# Debug files
+*debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
