@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  confluence-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: confluence-mcp
+    volumes:
+      - ./env:/app/env
+      - ./.env.local:/app/.env.local
+    environment:
+      - NODE_ENV=production
+      - NODE_PATH=/app/node_modules
+    ports:
+      - "3002:3002"
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
