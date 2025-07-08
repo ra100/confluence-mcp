@@ -19,6 +19,21 @@ An MCP (Model Context Protocol) server for Atlassian Confluence that allows AI a
 - An Atlassian Confluence account with API access
 - An Atlassian API token
 
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SnirRadomsky/confluence-mcp.git
+   cd confluence-mcp
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+   
+   **Note**: The `package-lock.json` file ensures consistent dependency versions across environments. It's recommended to keep it in the repository for reproducible builds.
+
 ### Configuration
 
 1. Copy the `env.example` file to `env`:
