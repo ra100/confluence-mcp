@@ -15,9 +15,9 @@ const spacesFilter = process.env.CONFLUENCE_SPACES_FILTER ?
   null;
 
 // Authentication headers
-const authString = Buffer.from(`${username}:${apiToken}`).toString('base64');
+const authHeader = !username ? `Bearer ${apiToken}` : `Basic ${Buffer.from(`${username}:${apiToken}`).toString('base64')}`;
 const headers = {
-  'Authorization': `Basic ${authString}`,
+  'Authorization': authHeader,
   'Content-Type': 'application/json'
 };
 
